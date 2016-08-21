@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        //методы setTimeout(), setInterval(), clearInterval обекта window
+
+        /*function forLesson() {
+            alert('Тест');
+        }
+
+        setTimeout(forLesson, 3000);*/ //однократное выполнение какого то кода(alert, к примеру) через какое то время (3000 милисекунд)
+
+        // если вместо setTimeout написать setInterval - многоразовое бесконечное действие
+        //ИЛИ  setTimeout("alert('Тест');", 3000);
+
+
+       function forLesson() {
+            alert('Тест');
+        }
+
+        var idInt = setInterval(forLesson, 3000);
+        clearInterval(idInt); // прекращение действия
+
+
+
+        // функция typeof() - узнаем тип параметра
+
+        var myString = "Строка";
+        var myNumber = 7;
+        var myArray = [5, 90];
+        var now = new Date();
+        var test = true;
+
+        function square(n) {
+            var result = n*n;
+            return result;
+        }
+
+        document.write(typeof (myArray));
+
+
+
+        //конструкция switch-case
+
+        var door = prompt("Выберите дверь от 1 до 5"); // prompt имеет в веду ответ в виде строки
+
+        /*if(door == 1) {
+            alert("Вы выиграли авто!");
+        }
+        else if(door == 2) {
+            alert("Вы выиграли микро!");
+        }
+        else if(door == 3) {
+            alert("Вы выиграли утюг!");
+        }
+        else if(door == 4) {
+            alert("Вы выиграли путешествие!");
+        }
+        else if(door == 5) {
+            alert("Вы выиграли мотоцикл!");
+        }
+        else {
+            alert("Вы ввели неверное число!");
+        }*/
+
+        //Или
+
+        switch(Number(door)) {
+            case 1:
+                alert("Вы выиграли авто!");
+                break; // выходим из цикла
+            case 2:
+                alert("Вы выиграли микро!");
+                break;
+            case 3:
+                alert("Вы выиграли утюг!");
+                break;
+            case 4:
+                alert("Вы выиграли путешествие!");
+                break;
+            case 5:
+                alert("Вы выиграли мотоцикл!");
+                break;
+            default:
+                alert("Вы ввели неверное число!");
+        }
+
+
+
+        //Тернарный оператор
+
+        var apple = 5;
+        var orange = 5;
+        var result = (apple == orange) ? "Одинаково" : "Разное количество";
+        document.write(result);
+
+        //или
+
+        /*if (apple == orange) {
+            result = "Одинаково";
+        }
+        else {
+            result = "Разное количество";
+        }*/
+
+
+
+        //Создание собственного объекта
+
+        //Первый метод
+
+        var car = new Object();
+        car.color = "Белый";
+        car.maxSpeed = 220;
+        car.brand = "Nissan";
+
+        document.write("<br />" + "У нашей машины вот такой цвет: " + car.color);
+
+        //Второй метод
+
+        var moto = { // создали объект
+            color: "Синий",
+            horsePower: 130,
+            brand: "Yamaha"
+        };
+        document.write("<br />" + "У нашего мотоцикла вот такой производитель: " + moto.brand);
+
+
+        //если писать свойство не напрямую, а через переменную
+
+        /*var test = "color";
+
+        document.write(moto[test]);*/
+
+
+        //добавление методов к объекту
+
+        var summerTour = {
+            turkey: 2000,
+            spain: 3000,
+            egypt: 1000
+        };
+
+        summerTour.calc = function (peoples, days, country) { // создали метод для нашего объекта
+            var result = peoples * days * this[country]; //this - тот же объект, в данном случае summerTour
+            return result;
+        };
+
+        document.write("<br />" + "Стоимость поездки составит: " + summerTour.calc (2,10, "turkey") + " гривен");
+
+
+         // свойства объекта на экран
+
+        var summerTour1 = {
+            turkey: 2000,
+            spain: 3000,
+            egypt: 1000
+        };
+
+        var option;
+
+        for(option in summerTour1) {
+            document.write("<br />" + option + ': ' + summerTour1[option] + "<br />"); //выведет на экран все свойства
+        }
+
+
+
+        //Объекты navigator, screen, location
+        /* Написать функцию, которая выводт на экран:
+        название браузера
+        язык браузера
+        название операционной системы
+        включены ли куки
+        подключен ли пользователь к Интернету
+        разрешение экрана
+        глубину цвета
+        адрес загруженной страницы
+        */
+
+        /*var option;
+
+        for(option in navigator) {
+            document.write("<br />" + option + ': ' + navigator[option] + "<br />");
+        }*/
+
+        function userDetails() {
+            document.write("<br />" + "Название браузера: " + navigator.userAgent + "<br />");
+            document.write("<br />" + "Язык браузера: " + navigator.language + "<br />");
+            document.write("<br />" + "Название операционной системы: " + navigator.appVersion + "<br />");
+            document.write("<br />" + "Включены ли куки: " + navigator.cookieEnabled + "<br />");
+            document.write("<br />" + "Подключен ли пользователь к Интернету: " + navigator.onLine + "<br />");
+            document.write("<br />" + "Разрешение экрана: " + screen.width + "x" + screen.height + "<br />");
+            document.write("<br />" + "Глубина цвета: " + screen.colorDepth + "<br />");
+            document.write("<br />" + "Адрес загруженной страницы: " + location.href + "<br />");
+        }
+
+        userDetails();
+
+       /* var option;
+
+         for(option in screen) {
+         document.write("<br />" + option + ': ' + screen[option] + "<br />");
+         }*/
+
+        /*var option;
+
+        for(option in location) {
+            document.write("<br />" + option + ': ' + location[option] + "<br />");
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

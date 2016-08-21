@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        function summa(number1,number2) {
+            var result = number1 + number2;
+            document.write("Сумма двух чисел ровна:" + result);
+        }
+
+        var car = 189;
+        var moto = 356;
+
+        summa(car, moto);
+
+
+        //summa(36,92);
+
+        /*var number = 56; - глобальная переменная
+
+        function myFun() {
+            document.write(number);
+        }
+
+        myFun();*/
+
+
+        /*function myFun2() {
+            var result = 45; - локальная переменная
+            document.write(result);
+        }
+        myFun2();*/
+
+        //Возврат значений (результата)
+
+        function square(number) {
+            var result = number * number;
+            return result;
+        }
+
+        var total = square(298);
+
+        alert(total);
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

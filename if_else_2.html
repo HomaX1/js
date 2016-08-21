@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+// Множественные условия
+
+        // УСЛОВИЕ ФОРМАТА "И"
+
+var weather = "ясно";
+var car = "да";
+
+if(weather == "ясно" && car == "да") { // знак && - означает "И"
+    document.write ("Ура! Мы едем на пляж! ");
+}
+
+else {
+    document.write ("Что ж, значит мы пойдем в боулинг! ");
+}
+
+        //УСЛОВИЕ ФОРМАТА "ИЛИ"
+
+var myFriend = "Катя";
+
+        if (myFriend == "Таня" || myFriend =="Катя" ) { // знак || означает "ИЛИ"
+document.write("Мы идем в кафе. ");
+        }
+
+        else {
+document.write("Мы гуляем по городу. ");
+        }
+
+        //НЕСКОЛЬКО УСЛОВИЙ ОДНОВРЕМЕННО
+
+        var kefir = "нет", ryazhenka = "нет", yogurt = "да";
+
+        if(kefir == "да") {
+            document.write("Мы покупаем кефир");
+        }
+
+        else if(ryazhenka == "да") {
+            document.write("Мы покупаем ряженку");
+        }
+
+        else if(yogurt == "да") {
+            document.write("Мы покупаем йогурт");
+        }
+
+        else {
+            document.write("Мы ничего не покупаем и уходим из магазина");
+        }
+
+
+        //ВОЗМОЖНАЯ ЗАПИСЬ
+
+        var number = 10;
+
+        if(number) {
+            document.write("Истина"); //в данном случае на любое число будет выпадать ИСТИНА, кроме значение "0", если вместо цифры будет строка - будет ИСТИНА("да")
+        }
+
+        else {
+            document.write("Ложь"); // если число будет "0", то будет ЛОЖЬ. если вместо цифры будет такое значение "", то выпадает ЛОЖЬ
+        }
+
+        //БУЛЕВО ЗНАЧЕНИЕ true false пишется без ковычек. тоесть просто true false
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

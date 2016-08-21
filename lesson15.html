@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+//Дополнительные методы для работы с массивами
+        /*
+        реверс - reverse()
+        сортировка - sort()
+        замена разделителя - join()
+        соединение массивов - contact()
+        делаем вырезку из массива - slice()
+         */
+
+
+        var students = ["Байтасова Анастасия", "Тристан Яна", "Зарви Екатерина", "Пономоренко Елена", "Некрасова Наталья"];
+
+        var students2 = ["Довбушева Елена", "Лаврентьев Анатолий"];
+
+        var total = students.concat(students2);
+
+        var happyStudents = students.slice(1,3); //счастливчики будут с первого по второго студента, третий не включается
+
+        document.write("В субботу идут убирать: " + happyStudents);
+
+        //document.write(total);
+
+        //document.write(students.reverse()); - переворачивает с заду на перед
+
+        //document.write(students.sort()); - сортирует в соответствии первой букве
+
+        //document.write(students.join(". ")); - ставит любые знаки между элементами
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        //isNaN() - это не число?
+
+        var fruit = "Апельсин";
+        var count = 10;
+
+        if (isNaN(fruit)) {
+            document.write("В переменной не число! ");
+        }
+
+        else {
+            document.write(fruit);
+        }
+
+
+        //parseInt() - берет только целое число, parseFloat()- берет и десятичные и сотые..., Number() - преобразователь всего в числа, но к примеру "6 бананов", то он выдаст ошибку. что числа нет
+
+        var bool = true;
+        var result = Number(bool);
+        document.write(result);
+
+
+
+        /*var count = "36 апельсинов"; // строка должна начинатся с цифр
+        var count1 = 5.56;
+        var newCount = parseFloat(count1); // берет только цифры
+        var test = 65;
+        var result = newCount + test;
+        document.write(result);*/
+
+
+        // метод toFixed()
+
+        var price = 10.30;
+        document.write("<br />" + price.toFixed(2)); // после запятой выводим две цифры
+
+
+        //объект Math
+
+        var age = 80.93;
+        age = Math.round(age); // если вместо round написать ceil, то будет округлять все в большую сторону, а если в нижнюю, то используем floor
+        document.write("<br />" + age);
+
+
+        var rand = Math.round(Math.random() * 100); // нужно случайное число от 0 до 100
+        document.write("<br />" + rand);
+
+
+        function myRandom (from,to) {
+            return Math.floor((Math.random() * (to - from + 1)) + from); // случайные числа с "n" число до "m" числа
+        }
+
+        var rand = myRandom (50,60);
+        document.write("<br />" + rand);
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

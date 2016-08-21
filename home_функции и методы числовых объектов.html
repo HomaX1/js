@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        //№1
+
+        /*var randSimbol = ["Молоко", 77, 11, "Мед", -88];
+
+        function myElement(anyArray) {
+            for(var i = 0; i < anyArray.length ; i++) {
+                if (isNaN(anyArray[i])) {
+                    document.write("Элемент массива: " + anyArray[i] + " - " + "не является числом <br />");
+                }
+                else {
+                    document.write("Элемент массива: " + anyArray[i] + " - " + "является числом <br />");
+                }
+            }
+        }
+
+        myElement(randSimbol);*/
+
+
+        //№2
+
+        /*/var myArray = ["100 попугаев", "201 рубль", "624 доллара", "109 кроликов", "33 весельчака", "62 кабана"];
+
+        function test(allArray) {
+            for( var i = 0; i < allArray.length; i++) {
+                var result = parseInt(allArray[i]);
+                document.write(result + "<br />");
+            }
+        }
+
+        test(myArray);*/
+
+
+        //№3
+
+
+        /*var randSimbol = [10.5, 15, 112, 77.6];
+
+        function test(myArray) {
+            for (var i = 0; i < myArray.length; i++) {
+                var result = myArray[i].toFixed(2);
+                document.write(result + "<br />");
+            }
+        }
+
+        test(randSimbol);*/
+
+
+        //№4
+
+        /*var numberArray = [34.82, 12.90, 17.01, 78.51];
+
+        function test(myArray) {
+            for( var i = 0; i < myArray.length; i++) {
+                var result = Math.round(myArray[i]);
+                document.write(result + "<br />");
+            }
+        }
+
+        test(numberArray);*/
+
+
+        //№5
+
+        var randomArray = new Array(10);
+
+        function myRandom (from,to) {
+            return Math.floor((Math.random() * (to - from + 1)) + from);
+        }
+
+        function test(myArray,begin,end) {
+            for (var i = 0; i < myArray.length; i++) {
+                myArray[i] = myRandom(begin,end);
+                document.write("<br />" + myArray[i]);
+            }
+        }
+
+
+        var start = 40;
+        var finish = 120;
+
+        document.write("В массив помещаются числа от " + start + "до " + finish + "<br />");
+
+        test(randomArray, start, finish);
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

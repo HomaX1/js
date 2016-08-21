@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        var days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+
+        var count = days.length; // показывает количество элементов в массиве days
+
+        //document.write("Количество элементов: " + count);
+
+        var students = ["Байтасова Анастасия", "Зарви Екатерина", "Некрасова Наталья", "Пономоренко Елена"];
+        students.push("Тристан Яна"); //добавляем еще одного студента в конец
+        students.unshift("Шиш Татьяна");//добавляем в начало списка
+        students.pop(); //удалит последний элемент массива
+        students.shift(); //удаляет первый эелемент массива
+
+        //document.write("Количество элементов: " + students.length);
+        //document.write("Первый студент: " + students[0]); // выводим добавленного студента
+        document.write("Первый студент: " + students[0]);
+    </script>
+</head>
+<body>
+</body>
+</html>

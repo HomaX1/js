@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        //№1
+
+        /*function name() {
+            var result = name.length;
+            return(result);
+        }
+
+        var word = prompt("Введите любое слово");
+
+        alert(word);
+        document.write(word.length); // как результат, вначале пользователь напишет свое слово и далее будет показано количество символом в веденном слове
+*/
+
+        //№2
+
+        /*var moreTen = "В этом слове больше десяти символов";
+        var lessTen = "В этом слове меньше десяти символов";
+        var ten = "В этом слове десять символов";
+
+        function name() {
+            var result = [moreTen || lessTen || ten];
+            if (name.length > 10) {
+                document.write(moreTen);
+            }
+            else if (name.length < 10) {
+                document.write(lessTen);
+            }
+            else if (name.length = 10) {
+                document.write(lessTen);
+            }
+            return(result);
+        }
+
+        var word = prompt("Введите любое слово");
+        alert(word);
+
+        document.write(result);*/
+
+
+        //№3
+
+       /* var userAnswer = prompt("Какого цвета трава?");
+        var answer = "зеленого";
+        var result = userAnswer.toLowerCase();
+
+        if(answer == result) {
+            document.write("Ваш ответ верный");
+        }
+
+        else {
+            document.write("Ваш ответ неверный");
+        }*/
+
+
+        //№4
+
+/*var mySite = "http://ruseller.com";
+
+        function myCheck(mySite) {
+            if (mySite.indexOf("http://") == -1) {
+                document.write("В названии сайта неприсутствует указание протокола");
+            }
+            else {
+                document.write("В названии сайта присутствует указание протокола");
+            }
+        }
+
+        myCheck(mySite);*/
+
+
+//№5
+
+
+       /* var myStr = "Хороший день.";
+        var day = myStr.slice(8,12);
+
+        document.write(day);*/
+
+        //№6
+
+       /* var students = ["Илья", "Greg", "Алина"];
+
+        for (var i = 0; i < students.length; i++) {
+
+            for (var j = 0; j < students[i].length; j++) {
+                if (students[i].charCodeAt(j) < 1040 || students[i].charCodeAt(j) > 1103)
+                    document.write("Найден символ, который не попадает в диапазон русских букв. Это символ: <strong>" + students[i].charAt(j) + "</strong><br />");
+
+            }
+
+        }*/
+
+
+       //№7
+
+        var forTesting = "8 пингвинов и 9 карасей.";
+
+        function numberOr(myString) {
+
+            var regV = /^\d/;
+
+            if (myString.search(regV) == -1) {
+                document.write("Строка начинается с буквы");
+            }
+            else {
+                document.write("Строка начинается с цифры");
+            }
+
+        }
+        numberOr(forTesting);
+
+
+        //№8
+
+        var myStr = "Иван вчера потерял свою кредитку, ее номер 1178-9087-2384-8787. Поэтому он пошел в банк и описал ситуацию. Там пошли ему навстречу и выдали новую кредитку под номером: 1103-8899-0811-1722";
+        var regV = /[0123]{4}-\d{4}-\d{4}-\d{4}/g;
+        var result = myStr.match(regV);
+
+    document.write(result);
+
+
+        //№9
+
+        var tel = "8/927/31/10/765";
+        var sign = "-";
+
+        function phoneNumber (tel, sign) {
+            var regV = /\//g;
+            var result = tel.replace(regV, sign);
+            document.write(result);
+
+        }
+
+        phoneNumber(tel, sign);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

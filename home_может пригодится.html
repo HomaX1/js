@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        var browser = navigator.userAgent;
+        var regV = /firefox/i; //необращает внимание на регистр
+        var regV2 = /opera/i;
+        var regV3 = /chrome/i;
+        var regV4 = /msie/i;
+
+        if (browser.search(regV) != -1) { // != означает "не равно"
+            document.write("Ваш браузер это Firefox");
+        }
+        else if (browser.search(regV2) != -1) {
+            document.write("Ваш браузер это Opera");
+        }
+        else if (browser.search(regV3) != -1) {
+            document.write("Ваш браузер это Chrome");
+        }
+        else if (browser.search(regV4) != -1) {
+            document.write("Ваш браузер это IE");
+        }
+        else {
+            document.write("У вас неизвестный браузер");
+        }
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!-- создание имение на Гите -->
+
+$ git config --global user.name "Nastia Baitasova"
+
+$ git config --global user.email ".....@gmail.com"
+
+$ git config --list <!-- выводим все настройки из config-->
+
+$ git help commit<!-- гит помощь или $ git commit --help-->
+
+
+<!--Цикл работы с репозиториями-->
+
+$ cd h:/loftblog <!--пишем на каком диске хранится и название папочки-->
+
+$ git init <!--после этого если мы внесли туда что-то новое, нам нужно их добавить-->
+
+$ git status <!--показывает состояние нашего репозитория, красным выделяет то, что у нас есть нового-->
+
+$ git add . <!--добавляем новое, а точка означает, что мы добавили все файлы, а может добавить конкретный файл написав к примеру index.html или git add --all-->
+
+<!--затем если мы добавили новое и туда внесли изменения (написали код), то при git status оно выделяется красным-->
+
+$ git add index.html <!--добавляем то что изменили, в данном случае index.html-->
+
+$ git commit -m "first commit" <!--закомитили и написали к нему комментарий-->
+
+
+<!--Сохранения на удаленный репозиторий gitHub-->
+
+<!--новый репозиторий на gitHub-->
+
+new repository <!--нажимаем на такую кнопку справа в углу-->
+
+public or private <!--выбираем платный или приватный, но приватный платный, по-этому выбираем приватный-->
+
+repository name <!--пишем найменование-->
+
+description(optional) <!--можем написать описание-->
+
+create repository <!--нажимаем на кнопку-->
+
+<!--Далее копируем все с remote в gitBash, нажимаем enter, и копируем и вставляем push, enter -->
+git remote add origin https://github.com/....
+git push -u origin master
+
+<!--далее будет запрос username - вводим, и потом запрос на пароль - вводим-->
+
+
+
+
+<!--Все команды для нового репозитория-->
+
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/....
+git push -u origin master
+
+
+<!--Клинорование репозитория - справа есть HTTPS, нажимаем на кнопочку (это мы скопировали ссылку),
+затем создали папочку у себя на компе, включили git bash и вставили туда скопированное, только добавим туда после $ git clone-->
+
+
+
+git branch new_style <!--создание новой ветки-->
+git checkout new_style
+git branch
+
+git checkout master <!--переключение на мастера. на первую ветку-->
+git branch
+
+git merge new_style <!--сливаем две ветки master и new_style-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

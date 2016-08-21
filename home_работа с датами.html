@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script>
+
+        //№1
+
+        var forTime = new Date();
+        var hours = forTime.getHours();
+        var minutes = forTime.getMinutes();
+        var seconds = forTime.getSeconds();
+
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+            seconds = "0" + seconds;
+        }
+
+        document.write("Текущее время - " + hours + ":" + minutes + ":" + seconds);
+
+
+        //№2
+
+
+        /*var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+        var now = new Date();
+        document.write(days[now.getDay()]);*/
+
+
+        //№3
+
+
+        function viewDate(n) {
+
+            var now = new Date();
+            var nowMilli = now.getTime(); // количество милисекунд до текущего момента
+            var nowPlus79 = new Date(1000 * 60 * 60 * 24 * n); //количетсво милисекунд от 1 января 1970 через 79 дней
+            var milli79 = nowPlus79.getTime(); // количество милисекунд, которые пройдут за 79 дней
+
+            var summaMilli = nowMilli + milli79;
+
+            var itogMoment = new Date(summaMilli);
+
+            var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+            var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+
+
+            document.write("День недели: " + days[itogMoment.getDay()] + "<br />" + "Число: " + itogMoment.getDate() + "<br />" + "Месяц: " + month[itogMoment.getMonth()] + "<br />" + "Год: " + itogMoment.getFullYear());
+
+        }
+
+        var userDays = prompt("Введите число дней от 1 до 1000");
+
+        if(userDays > 1000 || userDays < 1 || isNaN(userDays)) {
+            document.write("Вы ввели некорректное значение!")
+        }
+
+        else {
+            var itog = Math.round(userDays);
+            document.write("Через " + itog + " дней, будет вот такая дата: " + "<br />");
+            viewDate(itog);
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>
