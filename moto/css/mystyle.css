@@ -135,3 +135,9 @@ textarea
 	margin-top: 20px;
 }
 
+
+#div_for_img {
+	border: 2px solid #cc0000;
+	width: 850px;
+	height: 160px;
+}
