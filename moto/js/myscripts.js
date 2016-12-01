@@ -1,19 +1,24 @@
 $(document).ready(function() {
 
-//$('img[src*=logo]').fadeOut(4000).fadeIn(4000); //плавное исчезновение и появление
 
-    function hidden (element, time) {
-        var idElem = "#" + element;
+/*var textSize = $('#main_h1').css('color', '#3F4078').css('font-size', '19px'); //выбрали свойство CSS и поменяли его на синий цвет и затем взяли еще одно свойство и поменяли его
+     //ИЛИ
+     /!*$('#main_h1').css({
+     'color':'#3F4078',
+     'font-size':'19px'
+     }); - литерал объекта *!/
 
-        if(typeof time == "number" || time > 500 || time < 10000) {
+     //alert(textSize);*/
 
-            $(idElem).fadeOut(time);
-        }else{
-            return false;
-        }
-    }
 
-    hidden('moto_models', 3000);
+$('#my_h3 span').removeClass('pg').css({
+    'border': '1px solid #cc0000',
+    'padding': '5px',
+    'background-color': '#f6f6f6'
+});
+
+
+
 
 
 });//означает, что все скрипты будут выполнятся после готовности всей страницы, короткая версия $(function() {});
