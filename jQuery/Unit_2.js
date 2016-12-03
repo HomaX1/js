@@ -134,3 +134,23 @@ $('#my_h3 span').removeClass('pg').css({
     'padding': '5px',
     'background-color': '#f6f6f6'
 });
+
+
+
+
+                    //метод animate()
+
+/*$('#div_for_img').css({'border': '2px solid #cc0000'}).animate({'width': '450px'}, 4000, function(){
+ alert('Готово');
+ });*/ //уменьшили ширину блока с мотоциклами за 4 сек. и вывели алерт
+
+$('#main_h1').css({'border': '2px solid #cc0000' }).animate({'paddingTop': '70px'}, 5000); //padding-top в методе animate и все что через дифис пишется без пробела и второе слово с большой буквы
+
+
+
+                    //ДЗ 7
+
+$('#div_for_img img[alt*= 2]').css({'border': '1px solid #333333'}).animate({'borderWidth': '5px'}, 5000).fadeOut(5000);
+
+
+
