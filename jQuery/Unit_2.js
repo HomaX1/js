@@ -154,3 +154,80 @@ $('#div_for_img img[alt*= 2]').css({'border': '1px solid #333333'}).animate({'bo
 
 
 
+                    //ФУНКЦИИ append(), prepend(), before(), after()
+
+var myDiv = $('#div_for_img').css({'border': '2px solid #cc0000'});
+
+myDiv.before('<p>Данный абзац вставлен с помощью метода before()</p>');
+
+myDiv.after('<p>Данный абзац вставлен с помощью метода after()</p>');
+
+//код до картинок - вначале елементов
+
+myDiv.prepend('<p>Данный абзац вставлен с помощью метода prepend()</p>');
+
+//код после картинок - после елементов
+
+myDiv.append('<p>Данный абзац вставлен с помощью метода append()</p>');
+
+
+
+
+                    //ДЗ 8
+
+$('body').append('<p id="newparagraph">Данный абзац вставлен с помощью метода append()</p>');
+$('#newparagraph').css({
+    'background-color': '#000000',
+    'color': '#ffffff'
+});
+
+
+
+
+                    //ФУНКЦИИ each() и понятие $(this)
+
+$('img').each(function() {
+    if($(this).width() > 400) {      //$(this) - текущий, в данном случае данная (первая) картинка
+
+        $(this).fadeOut(3000); //исчезнет через 3 секунды
+
+    }
+});
+
+
+                    //ДЗ 9
+
+$('img[title*=т]').each(function() {
+    if($(this).height() > 50 && $(this).height() < 100) {
+        $(this).css({'border': '1px solid red'})
+    }
+});
+
+
+                    //ФУНКЦИИ size() и доступ к елементам выборки
+
+
+myDiv = $('div').size(); //количество div  в проекте, как length в js
+
+alert(myDiv);
+
+
+/* myDiv = $('div').get(0); // получает первый div
+ alert(myDiv);*/
+
+
+
+                    //ФУНКЦИИ clone() и remove()
+
+
+
+
+
+                    //ДВА ПОЛЕЗНЫХ СОВЕТА
+
+
+
+
+
+
+                    //ЗАКЛЮЧЕНИЕ
