@@ -212,22 +212,30 @@ myDiv = $('div').size(); //количество div  в проекте, как l
 alert(myDiv);
 
 
-/* myDiv = $('div').get(0); // получает первый div
- alert(myDiv);*/
+ myDiv = $('div').get(0); // получает первый div
+ alert(myDiv);
 
 
 
                     //ФУНКЦИИ clone() и remove()
 
+var myDiv = $('#div_for_img').clone(); // клонирывали картинки
+ $('#my_form').after(myDiv);
 
+
+var myForm = $('#my_form').remove(); //удалили
+$('#moto_table').before(myForm);//а сюда перенесли
 
 
 
                     //ДВА ПОЛЕЗНЫХ СОВЕТА
 
 
+//в один набор добавляем разнотипные елементы
+
+$('img[width=200], a[href*=documents]').fadeOut(5000);
 
 
+//отобрать елемент по наличию атрибута
 
-
-                    //ЗАКЛЮЧЕНИЕ
+$('img[alt]'); // найти все картинки с атрибутом alt
