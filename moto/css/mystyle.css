@@ -148,3 +148,21 @@ textarea
 	background-color: #E4D7E8;
 	padding: 5px;
 }*/
+
+
+.light {
+	background-color: #1F233C;
+	color: #ffffff;
+}
+
+
+#formHide {
+	text-decoration: underline;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.forTr {
+	background-color: #32375D;
+	color: #ffffff;
+}
