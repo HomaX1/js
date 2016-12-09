@@ -122,7 +122,7 @@ $('#div_for_img img').click(function() {
                     });
 
 
-                    $('#moto_table tbody tr').toggle(function() {
+                    $('#moto_table tbody tr').toggle(function() { //раюотает в старых версиях
                         $(this).addClass('forTr');
                     }, function() {
                         $(this).removeClass('forTr');
@@ -152,5 +152,68 @@ $('#div_for_img img').click(function() {
 
 
 
-                    //ДЗ 4
+                    //ДЗ 4   работает в старых версиях
+
+                    $('#div_for_img img').toggle(function(eventObject) {
+
+                        if(eventObject.shiftKey) {
+                            $(this).css('border', '4px solid #cc0000');
+                        }
+                        else {
+                            $(this).css('border', '4px solid #333333');
+                        }
+
+                        $(this).queue(function() {
+                            $(this).css('border', 'none');
+                        });
+
+                    });
+
+
+
+                    // сделать, что бы ссылка не реагировала на событие
+
+                    $('#superlink').click(function(eventObject) {
+                        eventObject.preventDefault();
+                        $('#forresults').append('<p>Вместо перехода по ссылке мы добавили абзац</p>');
+                    });
+
+                    //ЛИБО
+
+                    $('#superlink').click(function() {
+                        $('#forresults').append('<p>Вместо перехода по ссылке мы добавили абзац</p>');
+                        return false;
+                    });
+
+
+
+
+                    //ДЗ 5
+
+                    $('#my_button').click(function(eventObject) {
+                        var answer = confirm('Вы подтверждаете правильность ввода данных?');
+
+                        if(!answer) {
+                            eventObject.preventDefault();
+                        }
+
+                    });
+
+
+
+                    //СЛАЙД-ШОУ
+
+                    $('#small a').click(function(eventObject) {
+                        eventObject.preventDefault();
+                        $('#big img').hide().attr('src',$(this).attr('href'));
+                        $('#big img').fadeIn();
+
+                    });
+
+
+
+                    //ДЗ 6
+
+
+
 
